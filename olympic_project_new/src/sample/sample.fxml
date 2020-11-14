@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="390.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleController">
+    <children>
+        <HBox>
+            <children>
+                <Button fx:id="changeTomanagerPage" mnemonicParsing="false" onAction="#sceneSwitchEvent" prefHeight="25.0" prefWidth="121.0" text="manage page" textAlignment="CENTER" />
+                <TextFlow prefHeight="31.0" prefWidth="562.0" textAlignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Olympic Games Program - view page" textAlignment="CENTER" underline="true">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </TextFlow>
+            </children>
+        </HBox>
+        <TabPane fx:id="tapPaneSummery" minHeight="344.0" minWidth="675.0" prefHeight="359.0" prefWidth="723.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="viewAthletesTap" text="view athletes">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <ScrollPane layoutX="115.0" layoutY="13.0" prefHeight="313.0" prefWidth="585.0">
+                                    <content>
+                                        <TableView fx:id="athletesTableView" prefHeight="311.0" prefWidth="583.0">
+                                            <columns>
+                                                <TableColumn fx:id="athlleteNameCol" prefWidth="192.33332061767578" text="full name" />
+                                                <TableColumn fx:id="athleteTypecol" prefWidth="189.66659545898438" text="type" />
+                                            </columns>
+                                        </TableView>
+                                    </content>
+                                </ScrollPane>
+                                <ChoiceBox fx:id="countryBox2" layoutY="40.0" prefHeight="25.0" prefWidth="107.0" />
+                                <Label layoutX="4.0" layoutY="14.0" text="country:" underline="true">
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="view referees">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane>
+                                    <children>
+                                        <ScrollPane layoutX="115.0" layoutY="13.0" prefHeight="313.0" prefWidth="585.0">
+                                            <content>
+                                                <TableView fx:id="refereeTableView" prefHeight="311.0" prefWidth="583.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="refereeNameCol" prefWidth="192." text="full name" />
+                                                        <TableColumn fx:id="refereeCountryCol" prefWidth="192" text="country" />
+                                                        <TableColumn fx:id="refereeTypecol" prefWidth="197" text="sport type" />
+                                                    </columns>
+                                                </TableView>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="viewMedalsTab" onSelectionChanged="#updateMedalView" text="medals summery">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="533.0">
+                            <children>
+                                <AnchorPane />
+                                <Pane layoutX="1.0" layoutY="3.0" prefHeight="324.0" prefWidth="707.0">
+                                    <children>
+                                        <Label contentDisplay="CENTER" layoutX="328.0" layoutY="25.0" text="first place" underline="true">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font></Label>
+                                        <Label fx:id="countryFirstLable" layoutX="234.0" layoutY="61.0" prefHeight="20.0" prefWidth="179.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                                        <Label fx:id="numOfMedalsFirstLable" layoutX="461.0" layoutY="61.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                                        <Label layoutX="140.0" layoutY="120.0" text="second place" underline="true">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font></Label>
+                                        <Label fx:id="countrySecondLable" layoutX="69.0" layoutY="179.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                                        <Label fx:id="numOfMedalsSecondLable" layoutX="262.0" layoutY="179.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                                        <Label layoutX="490.0" layoutY="120.0" text="third place" underline="true">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font></Label>
+                                        <Label fx:id="countryThirdLable" layoutX="405.0" layoutY="179.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                                        <Label fx:id="numOfMedalsThirdLable" layoutX="593.0" layoutY="179.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label layoutY="301.0" prefHeight="17.0" prefWidth="712.0" text="*the podium is calculated by converting all the medal into points (first place - 3 points , second place 2 points...) and summarize them" />
+                                    </children>
+                                </Pane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
