@@ -1,3 +1,4 @@
 # Olympic_Project
-final project in object oriented at JAVA
-with idan.
+Final project in object oriented at JAVA
+With idan.
+First year. second semester
